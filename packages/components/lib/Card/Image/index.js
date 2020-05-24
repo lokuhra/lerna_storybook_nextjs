@@ -31,6 +31,7 @@ function MyImage({
       position: 'relative',
       textAlign: 'center',
       color: 'white',
+      cursor: 'pointer',
     },
     hidden: { display: 'none' },
     sensors: {
