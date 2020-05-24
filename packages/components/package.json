@@ -1,0 +1,44 @@
+{
+  "name": "components",
+  "version": "0.0.1",
+  "description": "React.js components library",
+  "author": "Nirmalya Ghosh <nirmalya.email@gmail.com>",
+  "license": "MIT",
+  "main": "dist/index.js",
+  "directories": {
+    "lib": "lib",
+    "test": "__tests__"
+  },
+  "files": [
+    "lib"
+  ],
+  "scripts": {
+    "test": "echo \"Error: run tests from root\" && exit 1",
+    "dev": "microbundle watch --jsx React.createElement lib/*.js",
+    "storybook": "start-storybook -p 6006",
+    "build-storybook": "build-storybook"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.8.7",
+    "@storybook/addon-actions": "^5.3.14",
+    "@storybook/addon-links": "^5.3.14",
+    "@storybook/addons": "^5.3.14",
+    "@storybook/react": "^5.3.14",
+    "babel-loader": "^8.0.6",
+    "microbundle": "^0.11.0"
+  },
+  "dependencies": {
+    "@emotion/core": "^10.0.28",
+    "@emotion/styled": "^10.0.27",
+    "@material-ui/core": "^4.9.14",
+    "@material-ui/icons": "^4.9.1",
+    "@material-ui/lab": "^4.0.0-alpha.53",
+    "clsx": "^1.1.0",
+    "date-fns": "^2.14.0",
+    "ramda": "^0.27.0",
+    "ramda-adjunct": "^2.27.0",
+    "react-helmet": "^6.0.0",
+    "react-icons": "^3.10.0",
+    "react-wifi-indicator": "^1.0.1"
+  }
+}
