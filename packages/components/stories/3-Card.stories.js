@@ -266,7 +266,7 @@ export default {
   component: Card,
 };
 
-export const Text = () => (
+export const Card1 = () => (
   <MaterialTheme>
     <Card key={data.uuid} {...data} width={384} height={216} />
   </MaterialTheme>
