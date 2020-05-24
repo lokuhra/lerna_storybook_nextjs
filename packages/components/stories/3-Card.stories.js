@@ -1,4 +1,5 @@
 import Card from '../lib/Card';
+import Grid from '@material-ui/core/Grid';
 import MaterialTheme from '../lib/MaterialTheme';
 import React from 'react';
 import { action } from '@storybook/addon-actions';
@@ -268,6 +269,10 @@ export default {
 
 export const Card1 = () => (
   <MaterialTheme>
-    <Card key={data.uuid} {...data} width={384} height={216} />
+    <Grid container justify="center" alignItems="center">
+      <Card key={data.uuid} {...data} width={384} height={216} />
+      <Card key={data.uuid} {...data} width={384} height={216} />
+      <Card key={data.uuid} {...data} width={384} height={216} />
+    </Grid>
   </MaterialTheme>
 );

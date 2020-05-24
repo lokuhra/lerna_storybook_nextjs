@@ -17,8 +17,9 @@ const CamerasList = ({
   height,
   widthCardDoorbell,
 }) => {
-  const [isHover, setIsHover] = useState(true);
+  const [isHover, setIsHover] = useState(false);
   const [isOpenModal, setIsOpenModal] = useState(false);
+  const [isHoverCard, setIsHoverCard] = useState(false);
 
   const useStyles = makeStyles((theme) => ({
     card: {
@@ -39,28 +40,24 @@ const CamerasList = ({
   const handleCloseModal = () => setIsOpenModal(false);
   const handleOpenModal = () => setIsOpenModal(true);
 
-  const [isOnSwitch, setIsOnSwitch] = useState(true);
+  const [isOnSwitch, setIsOnSwitch] = useState(false);
 
   const handleChangeSwitch = (event) => {
     setIsOnSwitch(!isOnSwitch);
   };
 
   return (
-    <Grid
-      item
-      container
-      xs={4}
-      sm={4}
-      md={4}
-      lg={4}
-      justify="center"
-      alignItems="center"
-    >
+    <Grid item xs={4}>
       <Modal
         isOpenModal={isOpenModal}
         handleCloseModal={handleCloseModal}
       />
-      <Card className={classes.card}>
+      <Card
+        className={classes.card}
+        onMouseOver={() => setIsHoverCard(true)}
+        onMouseLeave={() => setIsHoverCard(false)}
+        raised={isHoverCard}
+      >
         <Image
           last_thumbnail={last_thumbnail}
           liveStatus={liveStatus}
